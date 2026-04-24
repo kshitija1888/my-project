@@ -1,73 +1,149 @@
 # BFHL — SRM Full Stack Challenge Round 1
 
-## Structure
+## 📌 Overview
+
+This project is a full stack web application built as part of the **BFHL SRM Full Stack Challenge**.
+It consists of a backend API deployed on Render and a frontend interface deployed on Netlify.
+
+The application processes user input data and returns categorized results such as numbers, alphabets, special characters, and computed values.
+
+---
+
+## 🚀 Live Links
+
+* 🔗 Frontend: https://roaring-fudge-bc7c37.netlify.app/
+* 🔗 Backend API: https://my-project-1-ot2y.onrender.com/bfhl
+
+---
+
+## 🛠️ Tech Stack
+
+### Backend:
+
+* Node.js
+* Express.js
+
+### Frontend:
+
+* HTML
+* CSS
+* JavaScript (Fetch API)
+
+### Deployment:
+
+* Render (Backend)
+* Netlify (Frontend)
+
+---
+
+## ⚙️ API Endpoint
+
+### POST /bfhl
+
+#### Request Body:
+
+```json
+{
+  "data": ["a", "1", "334", "4", "R", "$"]
+}
+```
+
+---
+
+#### Response Format:
+
+```json
+{
+  "is_success": true,
+  "user_id": "yourname_ddmmyyyy",
+  "email": "your_email@example.com",
+  "roll_number": "your_roll_number",
+  "even_numbers": ["334", "4"],
+  "odd_numbers": ["1"],
+  "alphabets": ["A", "R"],
+  "special_characters": ["$"],
+  "sum": "339",
+  "concat_string": "Ra"
+}
+```
+
+---
+
+## 🧠 Features
+
+* ✔️ Identifies even and odd numbers
+* ✔️ Extracts alphabets (converted to uppercase)
+* ✔️ Detects special characters
+* ✔️ Calculates sum of numbers
+* ✔️ Generates concatenated string in reverse alternating caps
+
+---
+
+## 📁 Project Structure
+
 ```
 /
-├── backend/
-│   ├── index.js        ← Express API (POST /bfhl)
-│   └── package.json
-└── frontend/
-    └── index.html      ← Single-page app (no build step)
-```
-
-## Before deploying — edit backend/index.js lines 9-11
-```js
-const USER_ID            = 'yourname_ddmmyyyy';
-const EMAIL_ID           = 'your@college.edu';
-const COLLEGE_ROLL_NUMBER = 'XXXXXXXX';
+├── index.js        # Backend server
+├── package.json    # Dependencies and scripts
+├── index.html      # Frontend UI
+├── README.md       # Project documentation
 ```
 
 ---
 
-## Deploy Backend → Render (free, recommended)
+## ▶️ Run Locally
 
-1. Push repo to GitHub (public)
-2. Go to https://render.com → New → Web Service
-3. Root directory: `backend`
-4. Build command: `npm install`
-5. Start command: `node index.js`
-6. Copy the `https://your-app.onrender.com` URL
-
----
-
-## Deploy Backend → Railway
+### 1. Clone the repository
 
 ```bash
-cd backend
-railway login
-railway init
-railway up
+git clone https://github.com/kshitija1888/my-project.git
+cd my-project
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Start server
+
+```bash
+node index.js
+```
+
+Server will run at:
+
+```
+http://localhost:3000
 ```
 
 ---
 
-## Deploy Frontend → Netlify (drag-and-drop, 30 seconds)
+## 📬 Testing API
 
-1. Go to https://app.netlify.com/drop
-2. Drag the `frontend/` folder onto the page
-3. Done — you'll get a `https://xxx.netlify.app` URL
+You can test using:
+
+* Postman
+* Thunder Client
+* Browser (for GET only)
 
 ---
 
-## Test locally
+## ⚠️ Notes
 
-```bash
-cd backend && npm install && node index.js
-# open frontend/index.html in browser
-# set API Base URL to http://localhost:3001
-```
+* Make sure CORS is enabled for frontend-backend communication
+* Backend expects POST requests with JSON body
+* Frontend uses Fetch API to interact with backend
 
-## Test the API directly
+---
 
-```bash
-curl -X POST http://localhost:3001/bfhl \
-  -H "Content-Type: application/json" \
-  -d '{"data":["A->B","A->C","B->D","hello","X->Y","Y->Z","Z->X","G->H","G->H","G->I"]}'
-```
+## 👨‍💻 Author
 
-## Submission checklist
-- [ ] Edited USER_ID, EMAIL_ID, COLLEGE_ROLL_NUMBER
-- [ ] Backend deployed → copy base URL (e.g. https://myapp.onrender.com)
-- [ ] Frontend deployed → copy URL
-- [ ] Repo is PUBLIC on GitHub
-- [ ] Fill the MS Forms submission form
+**Kshitija Patil**
+
+---
+
+ 
+ 
+ 
