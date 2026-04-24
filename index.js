@@ -6,7 +6,7 @@ app.use(cors());
 app.use(express.json());
 
 // ── Personal details (edit these before deploying) ──────────────────────────
-const USER_ID            = 'kshitija_18042005';      // e.g. johndoe_17091999
+const USER_ID            = 'kshitija_18042005';      
 const EMAIL_ID           = 'kp0262@srmist.edu.in';
 const COLLEGE_ROLL_NUMBER = 'RA2311033010150';
 // ────────────────────────────────────────────────────────────────────────────
