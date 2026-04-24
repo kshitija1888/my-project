@@ -12,7 +12,7 @@ The application processes user input data and returns categorized results such a
 ## 🚀 Live Links
 
 * 🔗 Frontend: https://roaring-fudge-bc7c37.netlify.app/
-* 🔗 Backend API: https://my-project-1-ot2y.onrender.com
+* 🔗 Backend API:  https://my-project-1-ot2y.onrender.com
 
 ---
 
